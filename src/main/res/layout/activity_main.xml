@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityLiveRegion="polite"
+    android:scrollbarSize="58dp"
+    android:scrollbarStyle="outsideInset"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Please Select currency types"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerFrom"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="491dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/spinnerTo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="491dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerFrom"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etFrom"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="343dp"
+        android:ems="10"
+        android:hint="Value"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTo" />
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="22dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFrom" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="224dp"
+        android:onClick="onClik"
+        android:text="Convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFrom"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
